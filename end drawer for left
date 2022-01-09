@@ -1,0 +1,57 @@
+endDrawer: Drawer(
+        elevation: 16.0,
+        child: Column(
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              accountName: Text('prabhu'),
+              accountEmail: Text('prab.2017314@gct.ac.in'),
+              currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.white, child: Text('xyz')),
+              otherAccountsPictures: <Widget>[
+                CircleAvatar(
+                  backgroundColor: Colors.white,
+                  child: Text('abc'),
+                ),
+              ],
+            ),
+            ListTile(
+              title: Text('All inboxs'),
+              leading: Icon(Icons.email),
+            ),
+            Divider(
+              height: 5.0,
+            ),
+            ListTile(
+              title: Text('people'),
+              leading: Icon(Icons.people),
+            ),
+            Divider(
+              height: 5.0,
+            ),
+            ListTile(
+              title: Text('primary'),
+              leading: Icon(Icons.stay_primary_portrait),
+            ),
+            Divider(
+              height: 5.0,
+            ),
+            ListTile(
+              title: Text('contacts'),
+              leading: Icon(Icons.contact_phone),
+            ),
+            Divider(
+              height: 3.0,
+            ),
+            /*PersistentBottomSheetController:<Widget>[
+              RaisedButton(
+                elevation:10.0,
+                onPressed:(){
+                  print('click');
+                },
+              ),
+
+            ],*/
+          ],
+        ),
+      ),
+      backgroundColor: Colors.yellowAccent,
