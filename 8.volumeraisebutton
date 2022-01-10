@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: MyApp(),
+  ));
+}
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  double _volume = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('compter science engineeering'),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Center(
+            child: IconButton(
+              onPressed: () {
+                setState(() {
+                  _volume += 10;
+                });
+              },
+              icon: Icon(Icons.volume_up),
+              iconSize: 100,
+              color: Colors.green,
+            ),
+          ),
+          Text(
+            'volume:${_volume}',
+            style: TextStyle(
+              fontSize: 30,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
