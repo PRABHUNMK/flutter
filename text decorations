@@ -1,0 +1,38 @@
+return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'gct coimbatore',
+          style: TextStyle(
+            fontSize: 50.0,
+            fontStyle: FontStyle.italic,
+            shadows: [
+              Shadow(
+                color: Colors.black,
+                offset: Offset(3, 5),
+              )
+            ],
+          ),
+        ),
+      ),
+      body: Center(
+          child: Text(
+        'computer science ',
+        style: TextStyle(
+          fontSize: 50.0,
+          fontStyle: FontStyle.italic,
+          backgroundColor: Colors.blueGrey,
+          shadows: [
+            Shadow(
+              color: Colors.black,
+              offset: Offset(3, 4),
+              blurRadius: 2,
+            )
+          ],
+          decoration: TextDecoration.underline,
+          decorationColor: Colors.red,
+          decorationStyle: TextDecorationStyle.dashed,
+        ),
+      )),
+    );
+  }
+}
