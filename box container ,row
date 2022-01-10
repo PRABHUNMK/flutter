@@ -1,0 +1,47 @@
+return Scaffold(
+      appBar: AppBar(
+        title: Text('gct coimbatore'),
+      ),
+      body: Container(
+        height: 1000,
+        color: Colors.lightGreen,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget>[
+            Container(
+              color: Colors.brown,
+              child: Text(
+                'click',
+                style: TextStyle(
+                  fontSize: 30.0,
+                  fontStyle: FontStyle.italic,
+                  shadows: [
+                    Shadow(
+                        color: Colors.blue,
+                        offset: Offset(3, 5),
+                        blurRadius: 4),
+                  ],
+                ),
+              ),
+              height: 100,
+              width: 100,
+            ),
+            Container(
+              color: Colors.blue,
+              child: Text('click'),
+              height: 100,
+              width: 100,
+            ),
+            Container(
+              color: Colors.yellowAccent,
+              child: Text('click'),
+              height: 100,
+              width: 100,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
