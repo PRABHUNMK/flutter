@@ -1,0 +1,21 @@
+return Scaffold(
+      appBar: AppBar(
+        title: Text('gct coimbatore'),
+      ),
+      body: Container(
+        height: 1000,
+        color: Colors.lightGreen,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          textBaseline: TextBaseline.alphabetic,
+          children: <Widget>[
+            Text(
+              'computer',
+              style: TextStyle(fontSize: 30),
+            ),
+            Text('information'),
+          ],
+        ),
+      ),
+    );
