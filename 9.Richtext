@@ -1,0 +1,35 @@
+return Scaffold(
+      appBar: AppBar(
+        title: Text('computer science engineering'),
+      ),
+      body: RichText(
+        text: TextSpan(
+            text: 'prabhu cse',
+            style: TextStyle(
+                color: Colors.amberAccent,
+                fontSize: 80,
+                decoration: TextDecoration.underline,
+                decorationStyle: TextDecorationStyle.dotted,
+                fontStyle: FontStyle.italic),
+            children: <TextSpan>[
+              TextSpan(
+                text: 'machine learning',
+                style: TextStyle(
+                    color: Colors.green,
+                    fontSize: 80,
+                    decoration: TextDecoration.underline,
+                    decorationStyle: TextDecorationStyle.dotted,
+                    fontStyle: FontStyle.italic),
+              ),
+              TextSpan(
+                text: 'artificial intellegence',
+                style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 80,
+                    decoration: TextDecoration.underline,
+                    decorationStyle: TextDecorationStyle.dotted,
+                    fontStyle: FontStyle.italic),
+              ),
+            ]),
+      ),
+    );
