@@ -1,0 +1,27 @@
+return Scaffold(
+      appBar: AppBar(
+        title: Text('computer science engineering'),
+      ),
+      body: Container(
+          child: ButtonBar(
+        alignment: MainAxisAlignment.center,
+        children: <Widget>[
+          IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.mail),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.people),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {},
+          ),
+        ],
+      )),
+    );
