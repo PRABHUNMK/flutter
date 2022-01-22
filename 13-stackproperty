@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: MyApp(),
+  ));
+}
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('colored button'),
+      ),
+      body: Center(
+        child: Container(
+          height: 550,
+          width: 400,
+          color: Colors.black,
+          child: Stack(
+            overflow: Overflow.visible,
+            alignment: Alignment.topRight,
+            children: <Widget>[
+              Container(
+                height: 300,
+                width: 250,
+                color: Colors.amber,
+              ),
+              Positioned(
+                left: 0,
+                bottom: -35,
+                child: Container(
+                  height: 200,
+                  width: 150,
+                  color: Colors.blue,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
