@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: MyApp(),
+  ));
+}
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(title: Text('Demo')),
+        body: Builder(
+          builder: (BuildContext context) {
+            return TextButton(
+              child: Text('BUTTON'),
+              onPressed: () {
+                Scaffold.of(context).showBottomSheet<void>(
+                  (BuildContext context) {
+                    return Container(
+                      alignment: Alignment.center,
+                      height: 200,
+                      color: Colors.amber,
+                      child: Center(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            Text('BottomSheet'),
+                            ElevatedButton(
+                              child: Text('Close BottomSheet'),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                            )
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
+            );
+          },
+        ));
+  }
+}
