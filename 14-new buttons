@@ -1,0 +1,83 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: MyApp(),
+  ));
+}
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'our works',
+          style: TextStyle(fontSize: 43, color: Colors.deepOrange),
+        ),
+        centerTitle: true,
+      ),
+      body: Row(
+        children: <Widget>[
+          Text('hello'),
+          TextButton(
+              style: TextButton.styleFrom(
+                shadowColor: Colors.blueGrey,
+                primary: Colors.red,
+                onSurface: Colors.amber,
+              ),
+              onPressed: () {},
+              child: Text("this is text button")),
+          ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  shadowColor: Colors.amber,
+                  primary: Colors.yellow,
+                  onPrimary: Colors.blue),
+              onPressed: () {},
+              child: Text("this is elevated button")),
+          TextButton(
+            style: ButtonStyle(
+              overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                  (Set<MaterialState> states) {
+                if (states.contains(MaterialState.focused)) return Colors.red;
+                if (states.contains(MaterialState.hovered)) return Colors.green;
+                if (states.contains(MaterialState.pressed)) return Colors.blue;
+                return null; // Defer to the widget's default.
+              }),
+            ),
+            onPressed: () {},
+            child: Text('TextButton with custom overlay colors'),
+          ),
+          OutlinedButton(
+              style: OutlinedButton.styleFrom(
+                shape: StadiumBorder(),
+                side: BorderSide(width: 4, color: Colors.black),
+                primary: Colors.green,
+                onSurface: Colors.black,
+              ),
+              onPressed: () {},
+              child: Text("outlined button")),
+          OutlinedButton(
+            style: ButtonStyle(
+              shape: MaterialStateProperty.all<OutlinedBorder>(StadiumBorder()),
+              side: MaterialStateProperty.resolveWith<BorderSide>(
+                  (Set<MaterialState> states) {
+                final Color color = states.contains(MaterialState.pressed)
+                    ? Colors.blue
+                    : Colors.red;
+                return BorderSide(color: color, width: 2);
+              }),
+            ),
+            onPressed: () {},
+            child: Text('OutlinedButton with custom shape and border'),
+          )
+        ],
+      ),
+    );
+  }
+}
