@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+import 'dart:math';
+
+void main() {
+  runApp(MaterialApp(home: MyApp()));
+}
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  String randomNumer = 'x';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('random number generator'),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Random Number generated..:$randomNumer',
+              style: TextStyle(fontSize: 30.0),
+            ),
+            Container(
+              child: ElevatedButton(
+                  style:
+                      ElevatedButton.styleFrom(padding: EdgeInsets.all(20.0)),
+                  child: Text('Randomize'),
+                  onPressed: () {
+                    setState(() {
+                      randomNumer = Random().nextInt(101).toString();
+                    });
+                  }),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
